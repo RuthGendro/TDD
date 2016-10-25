@@ -1,31 +1,32 @@
 /* feedreader.js*/
+$(function () {
 
-$(function() {
+            describe('RSS Feeds', function () {
 
-    describe('RSS Feeds', function() {
-
-        // Test to make sure allFoods is defined and contains feeds
-        it('are defined', function() {
-            expect(allFeeds).toBeDefined();
-            expect(allFeeds.length).not.toBe(0);
-        });
-
-
-        // Test to verify that all feeds have a url
-        it('have a URL defined', function() {
-          for (var i = 0; i < allFeeds.length; i++) {
-            expect(allFeeds[i].url).toBeDefined();
-            expect(allFeeds[i].url).not.toBe('');
-      }
-    });
+                // Test to make sure allFoods is defined
+                // and contains feeds
+                it('are defined', function () {
+                    expect(allFeeds).toBeDefined();
+                    expect(allFeeds.length).not.toBe(0);
+                });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
-    });
+                // Test to verify that all feeds have a url
+                it('have a URL defined', function () {
+                    for (var i = 0; i < allFeeds.length; i++) {
+                        expect(allFeeds[i].url).toBeDefined();
+                        expect(allFeeds[i].url).not.toBe('');
+                    }
+                });
 
+                // Test to verify that all feeds have a name
+                it('have a name defined', function () {
+                    for (var i = 0; i < allFeeds.length; i++) {
+                        expect(allFeeds[i].name).toBeDefined();
+                        expect(allFeeds[i].name).not.toBe('');
+                    }
+                });
+            });
 
     /* TODO: Write a new test suite named "The menu" */
 
