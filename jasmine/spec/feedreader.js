@@ -37,12 +37,18 @@ $(function () {
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
 
+        // Test to verify that the menu changes when clicked
+        it('changes visibility when clicked', function () {
+            var menuIcon = $('.menu-icon-link');
+            var body = $('body');
+
+            menuIcon.trigger('click');
+            expect(body.hasClass('menu-hidden')).toBe(false);
+
+            menuIcon.trigger('click');
+            expect(body.hasClass('menu-hidden')).toBe(true);
+        });
     });
-    /* TODO: Write a test that ensures the menu changes
-     * visibility when the menu icon is clicked. This test
-     * should have two expectations: does the menu display when
-     * clicked and does it hide when clicked again.
-     */
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
